@@ -1,0 +1,13 @@
+Collection Interface (Java.util)
+
+1. -> List Interface
+             -> ArrayList       -> LinkedList       ->Stack
+
+2. -> Queue Interface 
+            -> Dequeue          -> PriorityQueue
+
+3. -> Set Interface                                     
+            -> HashSet          -> LinkedHashSet
+    
+        -> SortedSet Interface
+                -> TreeSet

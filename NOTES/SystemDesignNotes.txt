@@ -1,0 +1,83 @@
+************************  1 *******************
+-> Monolithic and microservice application
+
+
+************************  2 (LATENCY) *******************
+
+->  LATENCY = time taken by a request to get back the response is termed as Latency ,it is measured in millisecond.
+            For exa -> Let , t1 be time taken from client browser to server.
+                             t2 is time taken to process the request by server.
+                             t3 is time taken from server to come back to client
+                            therefore ,(t1+t2+t3) is the overall latency of the partiicular URL.
+
+Monolithic Architecture latancy is same as time required for server to compute i.e (Computational processing time).
+Distributed Architecture latency is (processing time + network delay)
+
+Generally, Monolithic Architecture latency is less compared to Distributed systems due less network call b/w different services.
+
+We can improve latency by using CDN(Content delivery Network) and using better CACHEING techniques , CDN basically help us load 
+static content of our website faster.
+
+************************ 3 (THROUGHPUT)*******************
+
+-> THROUGHPUT = Number of request processed by machine per unit time is considered as throughput of system . Application with
+                 higher throughput is considered to be better.
+
+Monolithic Application , Generally have fixed or limited throughput due limitation of resource/servers.
+Distributed Application , Generally have higher throughput as here is no limitation in terms of number of resource/servers.
+
+How to improve throughput ?
+    > Improving  the machine resource i.e (Ram ,CPU etc)
+    > Inproving the performance i.e (CDN ,caching)
+    > Distributed Architecture using load balancing
+    > proper monitoring and optimizing method and function calls.
+
+************************  4 (AVAILABILITY)*******************
+
+-> AVAILABILITY = How much time our application is available to our customers is termed as availablity.
+            Availablity percentage = ((uptime) / (uptime + downtime) ) * 100;
+        -> Most of the application now a days have around 100% availabilty.
+
+************************  5 (CONSISTENCY)*******************
+
+-> CONSISTENCY = Consistency is uniformity of data i.e when a user request for data and system returns same data irrespective of
+                 geographical location then system is considered to be consistent.
+
+MonoLithic Systems , are Generally more consistent due to single node/servers and no concept of replication.
+Distributed Systems , need efficient approach to make system consistent due to multiple replica of servers/nodes , Most comman 
+way to make these system is to restrict read operation till all the nodes have same updated data.
+
+    Consistency is of 3 type
+        -> Strongly consitent systems.      exa -> IRCTC ,Banking apps etc.
+        -> Eventually consistent systems.   exa -> Social media apps ,travel apps etc.
+
+************************  6 (PARTITION/FAULT TOLERANCE) *******************
+
+-> PARTITION/FAULT TOLERANCE = In Distributed systems ,due to multiple nodes/machine are connected to each other so frequent
+                                failures are possible in these systems . During a failure system should not go down ,
+                                and the system must handle the fault gracefully. This attribute of system is known as
+                                fault/partition Tolerance.
+
+************************  7 (CAP THEOREM)*******************
+
+-> CAP THEOREM = (Consistency + Availablity + Partition/Fault Tolerance)
+                CAP theroem states that ,it is possible to attain only two properties out of above mentioned three properties.
+                In these two properties partition/fault tolerance should always be considered while buiding the system 
+                and out Consistency and availability we need to consider any one of them.
+
+************************  8 (VERTICAL SCALING) *******************
+
+-> VERTICAL SCALING = vertical scalling means adding more Computational power in our server/nodes to meet the incresed demand
+                        of our application i.e adding more RAM and storage in our system to handle more load.
+
+Vertical scalling gives positive result upto a point after that it becomes to costly the it is a loss making
+desicion for a company.
+And ,after vertical scalling also our system are more prone to Single point of Failure(SPOF).
+
+************************  8 (HORIZONTAL SCALLING) *******************
+
+In ,Horizontal scalling we make use of multiple server/nodes which are connected to each other over network to server the need 
+of increased demand.
+These machine are commodity hardware i.e affordable machines and in this scalling we can add and remove resources very easily.
+
+
